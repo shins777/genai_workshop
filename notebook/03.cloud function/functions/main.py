@@ -19,13 +19,6 @@ import functions_framework
 
 app = Flask(__name__)
 
-"""
-Fuction descriptioin
-    - search: return string outcome for the mixed question
-        : For Dialogflow CX
-    - context: return searched relevant contexts
-        : For Dialogflow CX
-"""
 
 # Production env.
 prod = True
@@ -33,22 +26,13 @@ prod = True
 @functions_framework.http
 def search(request):
 
-# @app.route("/search", methods=['POST'])
-# def search():
-
     params = request.get_json()
     
     question = params['question']
     print(f" question : {question}")
 
     controller = Controller(prod)
-
-    condition = {
-        "mixed_question" : False,
-        "detailed_return" : False,
-    }
-
-    outcome = controller.response( question, condition )
+    outcome = controller.rag_process( question = question, top_n = 5  )
 
     print(f"result {outcome}")
 
@@ -57,6 +41,3 @@ def search(request):
     }
 
     return json.dumps(response,ensure_ascii=False)
-
-# if __name__ == "__main__":
-#     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
