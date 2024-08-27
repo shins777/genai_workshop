@@ -1,1 +1,1 @@
-# Workshop Google Generative AI 
+### Gemini operation
