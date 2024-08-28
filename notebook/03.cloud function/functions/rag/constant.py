@@ -12,8 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# 이 파일은 Vertex AI Search 기반의 RAG 구성을 위한 환경 설정입니다.
-# 실행전에 해당 환경 정보를 구성하세요.
 
 # Logging level( INFO | DEBUG )
 logging = "INFO"
