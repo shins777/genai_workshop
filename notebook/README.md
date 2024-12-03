@@ -1,1 +1,0 @@
-### Workshop for Google Generative AI 

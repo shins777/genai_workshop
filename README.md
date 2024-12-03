@@ -1,2 +1,2 @@
 # AI Workshop
-## L100 : Hands on workshop for RAG
+## This repository is targeted to understand Google AI technologies.
